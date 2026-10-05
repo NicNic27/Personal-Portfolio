@@ -1,1 +1,9 @@
 .freebuff/
+
+# Legacy dependencies (Bootstrap) from the old portfolio
+css/
+js/
+
+# Build artifacts
+*.map
+
