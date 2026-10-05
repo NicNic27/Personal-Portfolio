@@ -104,7 +104,6 @@ body{
     background: transparent;
     border: 2px solid rgb(179, 185, 8);
     border-radius: 50%;
-    font-size: 20px;
     color: rgb(8, 155, 213);
     text-decoration: none;
     margin: 30px 15px 30px 0;
@@ -112,6 +111,11 @@ body{
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.19s * var(--i));
+}
+.social-media a svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 .social-media a:hover{
     background: rgb(190, 197, 2);
@@ -304,6 +308,26 @@ textarea::-webkit-scrollbar-thumb{
 #contact .container form #button:hover{
     opacity: 0.5;
     color: rgb(28, 85, 0);
+}
+
+#contact .container form #form-status{
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 20px;
+}
+
+#contact .container form #form-status.error{
+    color: #ff6b6b;
+}
+
+#contact .container form #form-status.loading{
+    color: #ffd93d;
+    font-style: italic;
+}
+
+#contact .container form #form-status.success{
+    color: #6bff6b;
 }
 /* ===================================
           ANIMATION KEYFRAMES
