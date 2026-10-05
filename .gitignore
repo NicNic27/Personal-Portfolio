@@ -1,8 +1,9 @@
 .freebuff/
 
 # Legacy dependencies (Bootstrap) from the old portfolio
-css/
-js/
+# (matches top-level css/ js/ only, not nested assets/css/)
+/css/
+/js/
 
 # Build artifacts
 *.map
