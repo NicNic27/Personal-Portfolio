@@ -1,13 +1,13 @@
 (function () {
     var typed = new Typed(".typewriter", {
         strings: [
-            "a <strong>Web Developer</strong>",
-            "a <strong>Graphic Animator</strong>",
-            "a <strong>Programmer</strong>"
+            "<strong>Web Developer</strong>",
+            "<strong>Graphic Animator</strong>",
+            "<strong>Student Developer</strong>"
         ],
-        typeSpeed: 50,
-        backSpeed: 50,
-        backDelay: 1000,
+        typeSpeed: 55,
+        backSpeed: 55,
+        backDelay: 1100,
         loop: true,
         showCursor: false
     });
@@ -39,13 +39,13 @@
         status.textContent = "Sending…";
         status.className = "form-status loading";
 
-        // GitHub Pages is static — no server to send the email.
-        // Swap the `endpoint` below for a real Formspree/Netlify endpoint
-        // (and keep the `fetch` call) if you want submissions to arrive in your inbox.
-        var endpoint = ""; // e.g. "https://formspree.io/f/your_unique_id"
+        // This site is static, so the contact form cannot send email yet.
+        // It only validates the fields and shows a status message.
+        // To receive real submissions, add a form backend later
+        // (for example Formspree, Netlify Forms, or your own endpoint).
 
         setTimeout(function () {
-            status.textContent = "Thanks, " + first + "! Your message has been sent.";
+            status.textContent = "Thanks, " + first + "! Your message has been received here.";
             status.className = "form-status success";
             form.reset();
         }, 900);
