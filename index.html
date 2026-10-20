@@ -13,10 +13,11 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="logo">Dominic.</a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -25,26 +26,27 @@
         <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="eyebrow">BSIT Student &amp; Developer</span>
-          <h1>Hi, I'm <span class="gradient-text">Dominic</span></h1>
+          <span class="eyebrow"><span class="availability-dot" aria-hidden="true"></span> Open to opportunities</span>
+          <h1>A little code.<br>A little creativity.<br><span class="gradient-text">A lot of curiosity.</span></h1>
+          <p class="hero-intro">Hi, I’m Dominic Tawingan <span aria-hidden="true">↗</span></p>
           <p class="lede">
             I'm a 3rd-year BSIT student at Infotech Development Systems Colleges, Inc.
             I build clean web experiences and explore animation and visual storytelling
             alongside software development.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Let's Talk</a>
-            <a href="#projects" class="btn btn-ghost">See My Work</a>
+            <a href="#contact" class="btn btn-primary">Let’s Talk <span aria-hidden="true">↗</span></a>
+            <a href="#projects" class="btn btn-ghost">Explore My Work <span aria-hidden="true">↓</span></a>
           </div>
           <ul class="social-links">
             <li>
@@ -75,19 +77,21 @@
         </div>
 
         <div class="hero-visual">
+          <span class="portrait-label">THE PERSON BEHIND THE PIXELS</span>
           <div class="avatar-ring">
-            <img src="images/saitama.png" alt="Dominic Tawingan portrait">
+            <img src="images/Portrait.jpg" alt="Dominic Tawingan" width="2207" height="3085" fetchpriority="high">
           </div>
-          <div class="scroll-cursor" aria-hidden="true"></div>
+          <div class="portrait-caption"><span>Developer in the making.<br><strong>Always a work in progress.</strong></span><span class="portrait-mark" aria-hidden="true">✳</span></div>
         </div>
       </div>
+      <div class="hero-bottom container"><span>WEB DEVELOPMENT &nbsp; / &nbsp; ANIMATION &nbsp; / &nbsp; VISUAL STORYTELLING</span><a href="#about">A little more about me ↓</a></div>
     </section>
 
     <section id="about" class="section">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">About</span>
-          <h2>Who I Am</h2>
+          <span class="section-tag">01 / About me</span>
+          <h2>Curious by nature.<br>Creative by practice.</h2>
         </header>
         <div class="about-grid">
           <div class="about-text">
@@ -129,12 +133,12 @@
               <span class="stat-label">Year Student</span>
             </div>
             <div class="stat">
-              <span class="stat-number">4</span>
-              <span class="stat-label">Languages</span>
+              <span class="stat-number">&lt;/&gt;</span>
+              <span class="stat-label">Code &amp; creativity</span>
             </div>
             <div class="stat">
-              <span class="stat-number">7</span>
-              <span class="stat-label">Skills Listed</span>
+              <a class="cv-link" href="images/cv.pdf" download>Download CV ↗</a>
+              <span class="stat-label">Get to know my background</span>
             </div>
           </div>
         </div>
@@ -144,7 +148,7 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Skills</span>
+          <span class="section-tag">02 / The toolkit</span>
           <h2>What I Work With</h2>
         </header>
         <div class="skills-grid">
@@ -214,7 +218,7 @@
     <section id="projects" class="section">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Projects</span>
+          <span class="section-tag">03 / Selected explorations</span>
           <h2>Things I've Built</h2>
         </header>
         <div class="projects-grid">
@@ -270,7 +274,7 @@
     <section id="education" class="section section-alt">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Education</span>
+          <span class="section-tag">04 / Still learning</span>
           <h2>Where I'm Studying</h2>
         </header>
         <div class="timeline">
@@ -293,44 +297,47 @@
     <section id="contact" class="section">
       <div class="container">
         <header class="section-head">
-          <span class="section-tag">Contact</span>
-          <h2>Say Hello</h2>
+          <span class="section-tag">05 / Let’s connect</span>
+          <h2>Good things start<br>with a conversation.</h2>
         </header>
         <div class="contact-wrap">
-          <form id="contact-form" novalidate>
+          <form id="contact-form">
+            <h3 class="form-title">Have something in mind?</h3>
+            <p class="form-note">Draft an introduction, copy it, then send it to me on LinkedIn or Instagram.</p>
             <div class="form-grid">
               <div class="form-field">
                 <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="first_name" placeholder="Your first name" required>
+                <input type="text" id="firstname" name="first_name" autocomplete="given-name" placeholder="Your first name" required>
               </div>
               <div class="form-field">
                 <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="last_name" placeholder="Your last name" required>
+                <input type="text" id="lastname" name="last_name" autocomplete="family-name" placeholder="Your last name" required>
               </div>
               <div class="form-field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="your.email@example.com" required>
               </div>
               <div class="form-field">
-                <label for="mobile">Mobile</label>
-                <input type="text" id="mobile" name="mobile" placeholder="Your mobile number" required>
+                <label for="mobile">Mobile <span class="optional">(optional)</span></label>
+                <input type="tel" id="mobile" name="mobile" autocomplete="tel" placeholder="Your mobile number">
               </div>
             </div>
             <div class="form-field">
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-full">Copy Message <span aria-hidden="true">↗</span></button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
           <aside class="contact-aside">
-            <h3>Other Ways to Reach Me</h3>
+            <h3>Find me elsewhere.</h3>
             <ul>
               <li>
-                <span class="contact-meta">Email</span>
-                <a href="mailto:hello@ Dominic" class="contact-link">hello@example.com</a>
+                <span class="contact-meta">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/dominic-tawingan-77707032a" class="contact-link" target="_blank" rel="noopener noreferrer">Let’s connect ↗</a>
               </li>
               <li>
+                <span class="contact-meta">Instagram</span><a class="contact-link" href="https://www.instagram.com/cintax_err/" target="_blank" rel="noopener noreferrer">@cintax_err ↗</a></li><li>
                 <span class="contact-meta">Location</span>
                 <span class="contact-text">Philippines</span>
               </li>
@@ -356,7 +363,6 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
